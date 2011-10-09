@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
  * Date: 12/09/11
  * Time: 23:06
  */
-public class Commit {
+public class XmlCommit {
     private String message;
     private String type;
     private String level;

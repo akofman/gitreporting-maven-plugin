@@ -2,8 +2,8 @@ package com.github.akofman.maven.plugins.gitreporting.jaxb;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * User: Alexis Kofman
@@ -12,14 +12,14 @@ import java.util.Set;
  */
 @XmlRootElement
 public class XmlContent {
-    @XmlElement
-    private Set<Section> sections = new HashSet<Section>();
+    @XmlElement(name = "section")
+    private List<XmlSection> sections = new ArrayList<XmlSection>();
 
-    public void addSection(Section section) {
+    public void addSection(XmlSection section) {
         this.sections.add(section);
     }
 
-    public Set<Section> getSections() {
+    public List<XmlSection> getSections() {
         return sections;
     }
 }
